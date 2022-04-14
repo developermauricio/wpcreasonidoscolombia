@@ -1,6 +1,6 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
-.main-page-wrapper {
+/*.main-page-wrapper {
     padding-top: 0; 
 }
 .content-slider {
@@ -29,5 +29,191 @@
 .justify-content .vc_column-inner {
     display: flex;
     justify-content: center;
+}
+
+.backgroud-table {
+  background-color: #f2f2f2;
+}
+
+.content-icons {
+    display: flex;
+    justify-content: center;
+}
+.icons-team {
+    visibility: hidden;
+}*/
+
+.main-page-wrapper {
+    padding-top: 0; 
+}
+.content-slider {
+    margin-top: 50px;
+}
+.whb-row.whb-general-header.whb-sticky-row.whb-with-bg.whb-without-border.whb-color-dark.whb-flex-flex-middle {
+    padding-top: 8px;
+}
+.site-logo.wd-switch-logo img {
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.text-justify {
+    text-align: justify;
+}
+.text-upper {
+  text-transform: uppercase;
+}
+
+/***  Estilos de quienes somos  ***/
+div.text-crea-sonidos-colombia {
+    color: #114455;
+    text-align: justify;
+}
+div.title-text {
+    margin-bottom: 10px;
+}
+div#img-quienes-somos img {
+    height: 380px;
+}
+
+
+
+/***  Estilos de Beneficios  ***/
+.img-beneficios img {
+    height: 680px;
+    object-fit: contain;
+}
+div#infoBeneficiosContent {
+    width: 80vh;
+}
+div.text-crea-beneficios {
+    text-align: left;
+    margin-bottom: 0 !important;
+    color: #114455;
+}
+
+
+/***  Estilos de video yuri  ***/
+.content-video-yuri {
+    background-size: contain;
+}
+div#video-yuri-text {
+    padding-top: 9rem;
+    padding-left: 18rem;
+    padding-right: 8rem;
+}
+div#cont-video-yuri {
+    padding: 2rem 0;
+    padding-right: 10rem;
+}
+
+
+/***  Estilos de los ganadores  ***/
+div.item-ganadores img {
+    border-radius: 14px;
+}
+
+
+/***  Estilos de los pasos  ***/
+.content-pasos {
+    display: flex;
+}
+div#contentPasos {
+    margin-bottom: 0;
+}
+a#btnPasos {
+    width: 100%;
+    background-color: #A700E9;
+    color: white;
+    font-size: 1.2rem;
+    padding: 14px;
+}
+
+
+
+/***  Estilos de la agenda  ***/
+div#contentAgenda .wd-accordion.wd-style-default .wd-accordion-item:first-child {
+    border-top: 2px solid #ffffff85;
+}
+div#contentAgenda .wd-accordion.wd-style-default .wd-accordion-item {
+    border-bottom: 1px solid #ffffff85;
+}
+div#contentAgenda .wd-accordion-title-text:hover {
+    color: white;
+}
+div#contentAgenda .wd-accordion .wd-accordion-title.wd-active .wd-accordion-title-text, .wd-accordion .wd-accordion-title:hover .wd-accordion-title-text {
+    color: white;
+}
+
+
+/***  Estilos de capacitaciones  ***/
+div.capacitacion img {
+    border-radius: 15px;
+}
+
+
+/***  Estilos footer  ***/
+div#footer-column-three {
+    padding-right: 12rem;
+}
+
+div#logo-bancolombia {
+    width: 312px;
+    height: auto;
+    margin-bottom: 20px;
+}
+div#logo-ecopetrol img {
+    width: 100%;
+    height: 100px;
+}
+div#logo-yuri img {
+    width: 315px;
+    height: auto;
+}
+icons-size-large .wd-social-icon {
+    width: 40px;
+    height: 40px;
+}
+div#footer-column-one {
+    padding-left: 8rem;
+}
+div#logo-white--footer img {
+    width: 180px;
+}
+div.text-footer {
+    color: #114455;
+    text-align: justify;
+}
+
+div#contentSocial .icons-design-colored .social-facebook {
+    background-color: #114455;
+}
+div#contentSocial .icons-design-colored .social-instagram {
+    background-color: #114455;
+}
+div#contentSocial .icons-design-colored .social-youtube {
+    background-color: #114455;
+}
+div#contentSocial .icons-design-colored .social-spotify {
+    background-color: #114455;
+}
+div#contentSocial .wd-social-icons.icons-size-large .wd-icon {
+    font-size: 20px;
+    line-height: 40px;
+}
+div#contentSocial .icons-size-large .wd-social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+div#footer-column-two .textwidget {
+    display: flex;
+    justify-content: center;
+  	padding-top: 2rem;
+}
+div#footer-column-two ul.menu a {
+    color: #114455;
 }</style>
 <!-- end Simple Custom CSS and JS -->
