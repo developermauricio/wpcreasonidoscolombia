@@ -1,48 +1,5 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
-/*.main-page-wrapper {
-    padding-top: 0; 
-}
-.content-slider {
-    margin-top: 50px;
-}
-
-.text-justify {
-  text-align: justify
-}
-
-.text-crea-sonidos-colombia {
-    text-align: justify;
-    font-size: 1.2rem;
-}
-
-.content-inscripcion {
-    height: 581px;
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    background-color: #5d9ba1;
-    color: white;
-    margin-left: -15px;
-}
-
-.justify-content .vc_column-inner {
-    display: flex;
-    justify-content: center;
-}
-
-.backgroud-table {
-  background-color: #f2f2f2;
-}
-
-.content-icons {
-    display: flex;
-    justify-content: center;
-}
-.icons-team {
-    visibility: hidden;
-}*/
-
 .main-page-wrapper {
     padding-top: 0; 
 }
@@ -106,6 +63,19 @@ div#video-yuri-text {
 div#cont-video-yuri {
     padding: 2rem 0;
     padding-right: 10rem;
+}
+div#videoYuri {
+    margin-bottom: 0;
+}
+
+
+
+/***  Estilos de requisitos  ***/
+div#participar .wd-accordion.wd-style-default .wd-accordion-item:first-child {
+    border-top: 2px solid #00CDC7;
+}
+div#participar .wd-accordion.wd-style-default .wd-accordion-item {
+    border-bottom: 1px solid #00CDC7;
 }
 
 
@@ -198,6 +168,9 @@ div#contentSocial .icons-design-colored .social-youtube {
 div#contentSocial .icons-design-colored .social-spotify {
     background-color: #114455;
 }
+div#contentSocial .icons-design-colored .social-twitter {
+    background-color: #114455;
+}
 div#contentSocial .wd-social-icons.icons-size-large .wd-icon {
     font-size: 20px;
     line-height: 40px;
@@ -215,5 +188,205 @@ div#footer-column-two .textwidget {
 }
 div#footer-column-two ul.menu a {
     color: #114455;
+}
+
+
+/***  Estilos para moviles  ***/
+@media (max-width: 767.98px) { 
+  .whb-top-bar-inner {
+      height: auto;
+  }
+  .site-logo img {
+    object-fit: contain;
+  }
+  div.title-convovatoria h4 {
+    font-size: 20px !important;
+  }
+  div#img-quienes-somos img {
+    height: auto;
+  }
+  .img-beneficios img {
+    height: auto;
+  }
+  div#infoBeneficiosContent {
+    width: 100%;
+    padding: 1rem;
+  }
+  div#video-yuri-text {
+    padding-top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  div#cont-video-yuri {
+    padding: 0 1rem;
+    padding-right: 1rem;
+  }
+  div#html-video video {
+    height: auto;
+  }
+  div#videoYuri iframe {
+    height: 250px;
+  }
+  .content-pasos {
+    display: block;
+  }
+  div#footer-column-one {
+    padding-left: 0;
+  }
+  div#footer-column-two .textwidget {
+    padding-top: 0;
+  }
+  div#footer-column-three {
+    padding-right: 0;
+    padding-left: 1rem;
+  }
+}
+
+/***  Estilos para tables  ***/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .site-logo img {
+    object-fit: contain;
+  }
+  div#img-quienes-somos {
+    display: flex;
+    height: 500px;
+    align-items: center !important;
+  }
+  div#img-quienes-somos img {
+    height: auto;
+  }
+  div#infoBeneficiosContent {
+    width: 50%;
+  }
+  .img-beneficios {
+    height: 700px;
+    display: flex;
+    align-items: center;
+  }
+  .img-beneficios img {
+    height: auto;
+  }
+  div#video-yuri-text {
+    padding-top: 0;
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+  div#cont-video-yuri {
+    padding: 0;
+    padding-right: 1rem;
+  }
+  div#html-video video {
+    height: auto;
+  }
+  div#videoYuri iframe {
+    height: 260px;
+  }
+  div#footer-column-one {
+    padding-left: 0;
+  }
+  div#footer-column-two .textwidget {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  div#footer-column-three {
+    padding-right: 1rem;
+    height: 450px;
+    display: flex;
+    align-items: center;
+  }
+  div#logo-bancolombia {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/***  Estilos para desktpos  ***/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  .site-logo img {
+    object-fit: contain;
+  }
+  div#img-quienes-somos {
+    height: 480px;
+    display: flex;
+    align-items: center;
+  }
+  div#img-quienes-somos img {
+    height: auto;
+  }
+  div#infoBeneficiosContent {
+    width: 50%;
+  }
+  div#video-yuri-text {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+  div#cont-video-yuri {
+    padding: 0;
+    padding-right: 1rem;
+  }
+  div#html-video video {
+    height: auto;
+  }
+  div#cont-video-yuri iframe {
+    height: 300px;
+  }
+  div#videoYuri {
+    margin-bottom: 0;
+  }
+  div#footer-column-one {
+    padding-left: 0;
+  }
+  div#footer-column-three {
+    padding-right: 1rem;
+  }
+  div#logo-bancolombia {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/***  Estilos para desktpos large  ***/
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+  div#img-quienes-somos {
+    height: 380px;
+    display: flex;
+    align-items: center;
+  }
+  div#img-quienes-somos img {
+    height: auto;
+  }
+  div#infoBeneficiosContent {
+    width: 50%;
+  }
+  div#video-yuri-text {
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+  }
+  div#cont-video-yuri {
+    padding: 0;
+    padding-right: 2rem;
+  }
+  div#html-video {
+    margin-bottom: 0;
+  }
+  div#html-video video {
+    height: auto;
+  }
+  div#cont-video-yuri iframe {
+    height: 380px;
+  }
+  div#footer-column-one {
+    padding-left: 2rem;
+  }
+  div#footer-column-three {
+    padding-right: 2rem;
+  }
 }</style>
 <!-- end Simple Custom CSS and JS -->

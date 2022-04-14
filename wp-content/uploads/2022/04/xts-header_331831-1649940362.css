@@ -42,6 +42,10 @@
 	}
 
 @media (max-width: 1024px) {
+		.whb-top-bar-inner {
+		height: 40px;
+		max-height: 40px;
+	}
 	
 		.whb-general-header-inner {
 		height: 60px;
