@@ -26,7 +26,7 @@ define( 'DB_NAME', 'wpcreasonidoscolombia' );
 define( 'DB_USER', 'forge' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'bHioKupqxE7ndkroMpuk' );
+define( 'DB_PASSWORD', 'NUOUaHtLxPccUD2N3PZ9' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -36,6 +36,9 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+// TODO: custom subir archivos
+//define('ALLOW_UNFILTERED_UPLOADS', true);
 
 /**#@+
  * Authentication unique keys and salts.

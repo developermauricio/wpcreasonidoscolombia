@@ -1,0 +1,1 @@
+function mytoggle(a,b){"none"==jQuery("#"+a).css("display")?(jQuery("#"+a).slideDown(300,"linear"),jQuery("#"+b).toggleClass("toogle-btn-opened"),jQuery("#"+a+" .ajax-message").html("")):(jQuery("#"+a).slideUp(250,"linear"),jQuery("#"+b).toggleClass("toogle-btn-opened"))};

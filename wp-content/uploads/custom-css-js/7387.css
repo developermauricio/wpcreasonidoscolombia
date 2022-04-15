@@ -1,0 +1,60 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+#btnModalAsael {
+  display: none;
+}
+#btnModalBanda {
+  display: none;
+}
+#btnModalCarlos {
+  display: none;
+}
+
+div.wd-popup {
+    border-radius: 15px;
+}
+.content-photo {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.imgPhotoArtista {
+    margin-bottom: 10px;
+}
+.imgPhotoArtista img {
+    border-radius: 10px;
+}
+
+.redes-sociales .content-icons {
+    display: flex;
+    justify-content: center;
+}
+.redes-sociales .icons-size-large .wd-social-icon {
+    width: 40px;
+    height: 40px;
+}
+.redes-sociales .wd-social-icons.icons-size-large .wd-icon {
+    font-size: 22px;
+    line-height: 40px;
+}
+.redes-sociales .icons-design-colored .social-facebook {
+    background-color: #008081;
+}
+.redes-sociales .icons-design-colored .social-instagram {
+    background-color: #008081;
+}
+.redes-sociales .icons-design-colored .social-youtube {
+    background-color: #008081;
+}
+.redes-sociales .icons-design-colored .social-spotify {
+    background-color: #008081;
+}
+.redes-sociales {
+    margin-bottom: 0;
+}
+.logo-creasonidos-artista img {
+    padding: 1rem 2rem;
+    width: 100%;
+    object-fit: contain;
+}</style>
+<!-- end Simple Custom CSS and JS -->

@@ -1,5 +1,13 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
+.slider-my-font {
+    font-family: 'Aspira Medium' !important;
+}
+
+.slider-my-font-bold {
+    font-family: 'Aspira Bold' !important;
+}
+
 .main-page-wrapper {
     padding-top: 0; 
 }
@@ -191,6 +199,17 @@ div#footer-column-two ul.menu a {
 }
 
 
+/***  Estilos pagina de contacto  ***/
+div#contentInfoContact {
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
 /***  Estilos para moviles  ***/
 @media (max-width: 767.98px) { 
   .whb-top-bar-inner {
@@ -239,6 +258,9 @@ div#footer-column-two ul.menu a {
   div#footer-column-three {
     padding-right: 0;
     padding-left: 1rem;
+  }
+  div#contentInfoContact {
+    height: auto;
   }
 }
 
