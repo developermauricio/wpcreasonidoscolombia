@@ -1,13 +1,22 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
 .slider-my-font {
-    font-family: 'Aspira Medium' !important;
+    /*font-family: 'Aspira Medium' !important;*/
+  font-family: 'Work Sans' !important;  
 }
 
 .slider-my-font-bold {
-    font-family: 'Aspira Bold' !important;
+    /*font-family: 'Aspira Bold' !important;*/
+  font-family: 'Work Sans' !important;
+}
+.whb-top-bar-inner {
+    height: 60px !important;
+    max-height: 60px !important;
 }
 
+ul#menu-main-navigation a {
+    color: #114455;
+}
 .main-page-wrapper {
     padding-top: 0; 
 }
@@ -38,8 +47,10 @@ div.text-crea-sonidos-colombia {
 div.title-text {
     margin-bottom: 10px;
 }
-div#img-quienes-somos img {
-    height: 380px;
+.terminos-participacion {
+    color: #008081 !important;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -64,7 +75,7 @@ div.text-crea-beneficios {
     background-size: contain;
 }
 div#video-yuri-text {
-    padding-top: 9rem;
+    padding-top: 0;
     padding-left: 18rem;
     padding-right: 8rem;
 }
@@ -205,6 +216,12 @@ div#contentInfoContact {
     display: flex;
     align-items: center;
 }
+input#btnSubmit {
+    background: #114455;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 
 
 
@@ -271,7 +288,7 @@ div#contentInfoContact {
   }
   div#img-quienes-somos {
     display: flex;
-    height: 500px;
+    height: 360px;
     align-items: center !important;
   }
   div#img-quienes-somos img {
@@ -332,7 +349,7 @@ div#contentInfoContact {
     object-fit: contain;
   }
   div#img-quienes-somos {
-    height: 480px;
+    height: 360px;
     display: flex;
     align-items: center;
   }
@@ -376,7 +393,7 @@ div#contentInfoContact {
 /***  Estilos para desktpos large  ***/
 @media (min-width: 1200px) and (max-width: 1399.98px) { 
   div#img-quienes-somos {
-    height: 380px;
+    height: 310px;
     display: flex;
     align-items: center;
   }
@@ -387,7 +404,7 @@ div#contentInfoContact {
     width: 50%;
   }
   div#video-yuri-text {
-    padding-top: 5rem;
+    padding-top: 0;
     padding-left: 5rem;
     padding-right: 2rem;
   }
@@ -409,6 +426,14 @@ div#contentInfoContact {
   }
   div#footer-column-three {
     padding-right: 2rem;
+  }
+}
+
+
+@media (min-width: 1400px) { 
+  div#img-quienes-somos img {
+      height: 230px;
+      object-fit: contain;
   }
 }</style>
 <!-- end Simple Custom CSS and JS -->

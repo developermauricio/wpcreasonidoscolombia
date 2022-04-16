@@ -1,21 +1,25 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
-#btnModalAsael {
+#btnModalAsael, #btnModalBanda, #btnModalCarlos, #btnModalYembema, #btnModalTimbiafrica {
   display: none;
 }
-#btnModalBanda {
+#btnModalGynca, #btnModalDiego, #btnModalEric, #btnModalCalibre, #btnModalHarol {
   display: none;
 }
-#btnModalCarlos {
+#btnModalJulio, #btnModalCatangon, #btnModalPuraSangre, #btnModalSaiConde, #btnModalViviana {
+  display: none;
+}
+#btnModalPacifico {
   display: none;
 }
 
+/***  Estilos modal info ganador  ***/
 div.wd-popup {
     border-radius: 15px;
 }
 .content-photo {
     display: flex;
-    height: 100vh;
+    /*height: 100vh;*/
     align-items: center;
 }
 .imgPhotoArtista {
@@ -24,7 +28,6 @@ div.wd-popup {
 .imgPhotoArtista img {
     border-radius: 10px;
 }
-
 .redes-sociales .content-icons {
     display: flex;
     justify-content: center;
@@ -56,5 +59,33 @@ div.wd-popup {
     padding: 1rem 2rem;
     width: 100%;
     object-fit: contain;
+}
+
+
+
+/***  Estilos contador  ***/
+.countTimer .countdown-days {
+    color: white !important;
+}
+.countTimer .countdown-days span {
+    color: white;
+}
+.countTimer .countdown-hours {
+    color: white !important;
+}
+.countTimer .countdown-hours span {
+    color: white;
+}
+.countTimer .countdown-min {
+    color: white !important;
+}
+.countTimer .countdown-min span {
+    color: white;
+}
+.countTimer .countdown-sec {
+    color: white !important;
+}
+.countTimer .countdown-sec span {
+    color: white;
 }</style>
 <!-- end Simple Custom CSS and JS -->
