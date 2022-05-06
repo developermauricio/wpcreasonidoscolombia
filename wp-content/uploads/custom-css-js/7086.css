@@ -281,6 +281,23 @@ input#btnSubmit {
   }
 }
 
+
+/***  Estilos para el blog  ***/
+span.vcard.author.author_name {
+    font-size: 0;
+}
+span.vcard.author.author_name span:before {
+    content: 'Creasonidos';
+    font-size: 14px;
+}
+header.entry-header {
+    display: none;
+}
+div#content-blog-home header.entry-header {
+    display: block;
+}
+
+
 /***  Estilos para tables  ***/
 @media (min-width: 768px) and (max-width: 991.98px) { 
   .site-logo img {
@@ -342,6 +359,14 @@ input#btnSubmit {
     margin-bottom: 20px;
   }
 }
+div.text-blog-diana {
+    display: none;
+}
+div#comments {
+    display: none;
+}
+
+
 
 /***  Estilos para desktpos  ***/
 @media (min-width: 992px) and (max-width: 1199.98px) { 
@@ -428,7 +453,9 @@ input#btnSubmit {
     padding-right: 2rem;
   }
 }
-
+/*.marquee0 >div{
+  width: 100% !important;
+}*/
 
 @media (min-width: 1400px) { 
   div#img-quienes-somos img {

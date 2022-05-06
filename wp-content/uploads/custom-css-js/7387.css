@@ -9,7 +9,7 @@
 #btnModalJulio, #btnModalCatangon, #btnModalPuraSangre, #btnModalSaiConde, #btnModalViviana {
   display: none;
 }
-#btnModalPacifico {
+#btnModalPacifico, #btnModalAlabadoras, #btnModalManteca, #btnModalEspiral, #btnModalMamba {
   display: none;
 }
 

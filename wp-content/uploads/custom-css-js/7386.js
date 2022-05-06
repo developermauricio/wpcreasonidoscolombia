@@ -22,6 +22,10 @@ jQuery(document).ready(function( $ ){  // carlos-rivas
   const btnViviana = () => { document.querySelector('.btnViviana').click(); }
   
   const btnPacifico = () => { document.querySelector('.btnPacifico').click(); }
+  const btnAlabadoras = () => { document.querySelector('.btnAlabadoras').click(); }
+  const btnManteca = () => { document.querySelector('.btnManteca').click(); }
+  const btnEspiral = () => { document.querySelector('.btnEspiral').click(); }
+  const btnMamba = () => { document.querySelector('.btnMamba').click(); }
   
   
   
@@ -46,6 +50,10 @@ jQuery(document).ready(function( $ ){  // carlos-rivas
   document.querySelector('[title="linkViviana"]').addEventListener("click", () => { btnViviana(); });
   
   document.querySelector('[title="linkPacifico"]').addEventListener("click", () => { btnPacifico(); });
+  document.querySelector('[title="linkAlabadoras"]').addEventListener("click", () => { btnAlabadoras(); });
+  document.querySelector('[title="linkManteca"]').addEventListener("click", () => { btnManteca(); });
+  document.querySelector('[title="linkEspiral"]').addEventListener("click", () => { btnEspiral(); });
+  document.querySelector('[title="linkMamba"]').addEventListener("click", () => { btnMamba(); });
   
            
   
@@ -70,6 +78,10 @@ jQuery(document).ready(function( $ ){  // carlos-rivas
   document.querySelector('.viviana').addEventListener("click", () => { btnViviana(); });
   
   document.querySelector('.pacifico-libre').addEventListener("click", () => { btnPacifico(); }); 
+  document.querySelector('.alabadoras').addEventListener("click", () => { btnAlabadoras(); });
+  document.querySelector('.manteca-blue').addEventListener("click", () => { btnManteca(); });
+  document.querySelector('.espiral').addEventListener("click", () => { btnEspiral(); });
+  document.querySelector('.manba').addEventListener("click", () => { btnMamba(); });
   
     
 });</script>
