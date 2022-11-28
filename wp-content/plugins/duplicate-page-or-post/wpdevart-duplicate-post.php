@@ -4,7 +4,7 @@
 * Plugin URI: https://wpdevart.com/
 * Author URI: https://wpdevart.com/ 
 * Description: Duplicate Page or Post is an great tool that allow to duplicate pages and posts. Now you can do it in one click.
-* Version: 1.5.2
+* Version: 1.5.4
 * Author: wpdevart
 * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
 */

@@ -3,8 +3,8 @@ Contributors: wpdevart
 Donate link: https://wpdevart.com/
 Tags: duplicate page, duplicate post, clone, clone page, clone post
 Requires at least: 3.4.0
-Tested up to: 5.9
-Stable tag: 1.5.2
+Tested up to: 6.0
+Stable tag: 1.5.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -286,3 +286,11 @@ Unfortunately, at this moment there isn't such functionality, but we will try to
 = 1.5.2 =
 
 *  Improved the translation.
+
+= 1.5.3 =
+
+*  Added new language - Slovenian.
+
+= 1.5.4 =
+
+*  Added new language - Sindhi.

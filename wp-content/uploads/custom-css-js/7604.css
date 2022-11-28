@@ -1,0 +1,11 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+.ld-login-modal-register {
+    display:none !important;
+}
+
+.ld-course-list-items .ld_course_grid .thumbnail.course .ld_course_grid_price {
+    display: none;
+}
+</style>
+<!-- end Simple Custom CSS and JS -->

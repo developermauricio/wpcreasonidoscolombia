@@ -152,7 +152,6 @@ class CustomCSSandJS_Admin {
 			$cma = $cm . '/addon/';
 			wp_enqueue_script( 'ccj-closebrackets', $cma . 'edit/closebrackets.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'ccj-matchbrackets', $cma . 'edit/matchbrackets.js', array( 'ccj-codemirror' ), $v, false );
-			wp_enqueue_script( 'ccj-xmlfold', $cma . 'fold/xml-fold.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'ccj-matchtags', $cma . 'edit/matchtags.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'cm-dialog', $cma . 'dialog/dialog.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'cm-search', $cma . 'search/search.js', array( 'ccj-codemirror' ), $v, false );
@@ -172,6 +171,16 @@ class CustomCSSandJS_Admin {
 			wp_enqueue_script( 'ccj-hint-css', $cma . 'hint/css-hint.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'ccj-hint-anyword', $cma . 'hint/anyword-hint.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_style( 'ccj-hint', $cma . 'hint/show-hint.css', array(), $v );
+
+			// Fold Addons
+			wp_enqueue_script( 'ccj-fold-brace', $cma . 'fold/brace-fold.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-fold-comment', $cma . 'fold/comment-fold.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-fold-code', $cma . 'fold/foldcode.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-fold-gutter', $cma . 'fold/foldgutter.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-fold-indent', $cma . 'fold/indent-fold.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-fold-markdown', $cma . 'fold/markdown-fold.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-fold-xml', $cma . 'fold/xml-fold.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_style( 'ccj-fold-gutter', $cma . 'fold/foldgutter.css', array(), $v );
 
 			// remove the assets from other plugins so it doesn't interfere with CodeMirror
 			global $wp_scripts;
@@ -214,9 +223,36 @@ class CustomCSSandJS_Admin {
 			'deactivate'     => __( 'Deactivate', 'custom-css-js' ),
 			'active_title'   => __( 'The code is active. Click to deactivate it', 'custom-css-js' ),
 			'deactive_title' => __( 'The code is inactive. Click to activate it', 'custom-css-js' ),
+
+			/* CodeMirror options */
+			'codemirror' => array(
+				'indentUnit'       => 4,
+				'indentWithTabs'   => true,
+				'inputStyle'       => 'contenteditable',
+				'lineNumbers'      => true,
+				'lineWrapping'     => true,
+				'styleActiveLine'  => true,
+				'continueComments' => true,
+				'extraKeys'        => array(
+					'Ctrl-Space' => 'autocomplete',
+					'Cmd-Space'  => 'autocomplete',
+					'Ctrl-/'     => 'toggleComment',
+					'Cmd-/'      => 'toggleComment',
+					'Alt-F'      => 'findPersistent',
+					'Ctrl-F'     => 'findPersistent',
+					'Cmd-F'      => 'findPersistent',
+					'Ctrl-J'     =>  'toMatchingTag',
+				),
+				'direction'        => 'ltr', // Code is shown in LTR even in RTL languages.
+				'gutters'          => array( 'CodeMirror-lint-markers' ),
+				'matchBrackets'    => true,
+				'matchTags'        => array( 'bothTags' => true ),
+				'autoCloseBrackets' => true,
+				'autoCloseTags'    => true,
+			)
 		);
 
-		return $vars;
+		return apply_filters( 'ccj_code_editor_settings', $vars);
 	}
 
 	public function add_meta_boxes() {
@@ -821,7 +857,9 @@ End of comment */ ',
 			$meta = $this->get_options_meta_html();
 		}
 
-			wp_nonce_field( 'options_save_meta_box_data', 'custom-css-js_meta_box_nonce' );
+		$options['multisite'] = false;
+
+		wp_nonce_field( 'options_save_meta_box_data', 'custom-css-js_meta_box_nonce' );
 
 		?>
 			<div class="options_meta_box">
@@ -834,8 +872,7 @@ End of comment */ ',
 
 				if ( ( $_key == 'preprocessor' && $options['language'] == 'css' ) ||
 					( $_key == 'linking' && $options['language'] == 'html' ) ||
-					$_key == 'priority' ||
-					$_key == 'minify' ) {
+					in_array( $_key, ['priority', 'minify', 'multisite' ] ) ) {
 					$close_div = true;
 					$output   .= '<div class="ccj_opaque">';
 				}
@@ -974,6 +1011,16 @@ End of comment */ ',
 			),
 		);
 
+		if ( is_multisite() && is_super_admin() && is_main_site() ) {
+			$options['multisite'] = array(
+				'title'    => __( 'Apply network wide', 'custom-css-js-pro' ),
+				'type'     => 'checkbox',
+				'default'  => false,
+				'dashicon' => 'admin-multisite',
+				'disabled' => true,
+			);
+		}
+
 		return $options;
 	}
 
@@ -1065,6 +1112,16 @@ End of comment */ ',
 				'dashicon' => 'editor-code',
 			);
 			$options['type']['values']['footer']    = $tmp['footer'];
+		}
+
+		if ( is_multisite() && is_super_admin() && is_main_site() ) {
+			$options['multisite'] = array(
+				'title'    => __( 'Apply network wide', 'custom-css-js-pro' ),
+				'type'     => 'checkbox',
+				'default'  => false,
+				'dashicon' => 'admin-multisite',
+				'disabled' => true,
+			);
 		}
 
 		return $options;
@@ -1513,7 +1570,9 @@ endif;
             <tr><td><strong>Auto Complete</strong></td><td> <code>Ctrl</code> + <code>Space</code></td></tr>
             <tr><td><strong>Find</strong></td><td> <code>Ctrl</code> + <code>F</code></td></tr>
             <tr><td><strong>Replace</strong></td><td> <code>Shift</code> + <code>Ctrl</code> + <code>F</code></td></tr>
+            <tr><td><strong>Save</strong></td><td> <code>Ctrl</code> + <code>S</code></td></tr>
             <tr><td><strong>Comment line/block</strong></td><td> <code>Ctrl</code> + <code>/</code></td></tr>
+            <tr><td><strong>Code folding</strong></td><td> <code>Ctrl</code> + <code>Q</code></td></tr>
             </table></p>',
 			)
 		);

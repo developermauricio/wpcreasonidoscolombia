@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wpcreasonidoscolombia' );
+define( 'DB_NAME', 'wpcreasonidos' );
 
 /** MySQL database username */
 define( 'DB_USER', 'forge' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'NUOUaHtLxPccUD2N3PZ9' );
+define( 'DB_PASSWORD', '7YnLAWmuEsU4fBTjj78u' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );

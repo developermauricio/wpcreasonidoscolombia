@@ -1,14 +1,14 @@
 <?php
 /**
  * @package CF Page or Post Duplicator
- * @version 1.1
+ * @version 6.0
  */
 /*
 Plugin Name: CF Page or Post Duplicator
 Plugin URI: https://wordpress.org/plugins/page-or-post-clone/
 Description: Permite a duplicação de Artigos ou Páginas
 Author: Carlos Fazenda
-Version: 5.8
+Version: 6.0
 Author URI: http://carlosfazenda.com/
 */
 
@@ -118,18 +118,18 @@ add_action( 'admin_action_content_clone', 'content_clone' );
  * Adiciona o botao "Duplicar" na listagem de Artigos/Páginas
  */
 
-$allowed_roles = array('editor', 'administrator', 'author');
-
-if( array_intersect($allowed_roles, $current_user->roles ) ) {
-
-	function content_clone_link( $actions, $post ) {
-		if (current_user_can('edit_posts')) {			
-			$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=content_clone&post=' . $post->ID, basename(__FILE__), 'clone_nonce' ) . '" title="Clone!" rel="permalink">Clone</a>';
-		}
+function content_clone_link( $actions, $post ) {
+	$allowed_roles = array('editor', 'administrator', 'author');
+	$current_user = wp_get_current_user();
+	
+	if( array_intersect($allowed_roles, $current_user->roles ) ) {
+		
+		$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=content_clone&post=' . $post->ID, basename(__FILE__), 'clone_nonce' ) . '" title="Clone!" rel="permalink">Clone</a>';
+		
 		return $actions;
 	}
-
-	add_filter( 'post_row_actions', 'content_clone_link', 10, 2 ); // Para artigos
-	add_filter( 'page_row_actions', 'content_clone_link', 10, 2 ); //Para páginas
 }
+add_filter( 'post_row_actions', 'content_clone_link', 10, 2 ); // Para artigos
+add_filter( 'page_row_actions', 'content_clone_link', 10, 2 ); //Para páginas
+
 ?>
