@@ -26,7 +26,7 @@ define( 'DB_NAME', 'wpcreasonidos' );
 define( 'DB_USER', 'forge' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '7YnLAWmuEsU4fBTjj78u' );
+define( 'DB_PASSWORD', 'SRnJ04NcPbna2SlJsciu' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
